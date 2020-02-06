@@ -8,6 +8,8 @@ import CartIcon from '@material-ui/icons/ShoppingCart';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 
+import api from './services/api';
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -37,6 +39,10 @@ const useStyles = makeStyles(theme => ({
 
 export default function App() {
   const classes = useStyles();
+  api.get('comics')
+    .then( res => {
+      console.log(res);
+    });
   return (
     <ThemeProvider theme={theme}>
       <AppBar>
