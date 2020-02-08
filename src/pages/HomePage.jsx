@@ -15,15 +15,19 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const classes = useStyles();
   const [comics, setComics] = useState([]);
+
   useEffect(() => {
     api.get('comics', {
       params: {
         formatType: "comic",
+        orderBy: "-onsaleDate",
       },
     })
       .then(res => {
-        setComics(res.data.data.results);
-        console.log(res.data.data.results);
+        const newComics = res.data.data.results
+          .filter((comic) => !!comic.prices[0].price);
+        setComics(newComics);
+        console.log(newComics);
       });
   }, [])
   return (

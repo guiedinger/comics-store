@@ -30,7 +30,9 @@ const useStyles = makeStyles(theme => ({
 }));
 export default (props) => {
   const classes = useStyles();
-  const price = props.prices[0].price;
+  const price = props.prices[0].price
+    .toLocaleString('en', { style: 'currency', currency: 'USD' });
+  const year = new Date(props.dates[0].date).getFullYear();
 
   return (
     <Card className={classes.root}>
@@ -50,14 +52,16 @@ export default (props) => {
               {props.title}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">
-              2019
+              {year}
+            </Typography>
+            {!!props.pageCount &&
+              <Typography variant="subtitle1" color="textSecondary">
+                {props.pageCount} pages
           </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              460 pages
-          </Typography>
+            }
           </div>
           <Typography component="h6" variant="h6">
-            {`$${price}`}
+            {price}
           </Typography>
         </CardContent>
       </div>
