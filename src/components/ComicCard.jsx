@@ -11,6 +11,10 @@ const useStyles = makeStyles(theme => ({
     height: '225px',
     margin: '15px',
   },
+  title: {
+    maxHeight: '6rem',
+    overflow: 'hidden',
+  },
   content: {
     display: 'flex',
     flexFlow: 'row nowrap',
@@ -48,7 +52,7 @@ export default (props) => {
         />
         <CardContent className={classes.details}>
           <div>
-            <Typography>
+            <Typography className={classes.title}>
               {props.title}
             </Typography>
             <Typography variant="subtitle1" color="textSecondary">

@@ -7,7 +7,7 @@ import {
 import Container from '@material-ui/core/Container';
 
 import ToolBar from './components/ToolBar';
-import Home from './pages/HomePage';
+import Comics from './pages/ComicsPage';
 import Cart from './pages/CartPage';
 
 export default (props) => {
@@ -16,8 +16,8 @@ export default (props) => {
       <ToolBar />
       <Container maxWidth="md">
         <Switch>
-          <Route exact path="/">
-            <Home></Home>
+          <Route exact path="/:page?">
+            <Comics></Comics>
           </Route>
           <Route path="/cart">
             <Cart></Cart>
