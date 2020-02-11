@@ -26,9 +26,9 @@ export default (props) => {
   const classes = useStyles();
   const lastPage = parseInt(props.totalComics / props.comicsByPage);
   const showedPages = 5;
-  const firstListPage = (props.currentPage - showedPages / 2) > 0 ?
-    (props.currentPage - showedPages / 2) : 1;
-  const pageList = [1, 2, 3, 4, 5];
+  const firstListPage = Math.ceil(props.currentPage + 1 - (showedPages / 2)) > 0 ?
+    Math.ceil(props.currentPage + 1 - (showedPages / 2)) : 1;
+  const pageList = [1, 2, 3, 4, 5].map((e, i) => i + firstListPage);
 
   return (
     <Paper className={classes.root}>

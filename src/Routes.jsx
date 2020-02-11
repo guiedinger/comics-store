@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 import Container from '@material-ui/core/Container';
 
@@ -16,7 +17,10 @@ export default (props) => {
       <ToolBar />
       <Container maxWidth="md">
         <Switch>
-          <Route exact path="/:page?">
+          <Route exact path="/" render={() => (
+            <Redirect to="/1"/>
+          )}/>
+          <Route path="/:page">
             <Comics></Comics>
           </Route>
           <Route path="/cart">
