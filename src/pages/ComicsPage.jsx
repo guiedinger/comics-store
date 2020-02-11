@@ -8,6 +8,9 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     margin: '50px 0px',
+    display: 'flex',
+    alignItems: 'center',
+    flexFlow: 'column'
   },
   comicsContainer: {
     display: 'flex',
@@ -45,15 +48,15 @@ export default (props) => {
 
   return (
     <div className={classes.root}>
+      <div className={classes.comicsContainer}>
+        {comics && comics.map(comic =>
+          <ComicCard key={comic.id} {...comic} />)}
+      </div>
       <Paginator
         currentPage={currentPage}
         comicsByPage={comicsByPage}
         totalComics={totalComics}
       />
-      <div className={classes.comicsContainer}>
-        {comics && comics.map(comic =>
-          <ComicCard key={comic.id} {...comic} />)}
-      </div>
     </div>
   );
 }

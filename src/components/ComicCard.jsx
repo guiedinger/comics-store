@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography } from '@material-ui/core';
+import { Card, CardMedia, CardContent, Typography, useMediaQuery } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '350px',
-    height: '225px',
+    width: props => props.isSmall ? '90%' : '350px',
+    height: props => props.isSmall ? 'auto' : '225px',
     margin: '15px',
   },
   title: {
@@ -14,23 +14,25 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     display: 'flex',
-    flexFlow: 'row nowrap',
+    flexFlow: props => props.isSmall ? 'column': 'row nowrap',
   },
   details: {
     display: 'flex',
     flexFlow: 'column',
     justifyContent: 'space-between',
     boxSizing: 'border-box',
-    width: '200px',
+    width: props => props.isSmall ? 'auto' : '200px',
   },
   comicImage: {
-    width: '150px',
-    height: '225px',
+    width: props => props.isSmall ? '100%' : '150px',
+    height: props => props.isSmall ? 'auto' : '225px',
+    paddingBottom: props => props.isSmall ? '150%' : '0px',
     alignSelf: 'center',
   }
 }));
 export default (props) => {
-  const classes = useStyles();
+  const matches = useMediaQuery('(min-width:375px)');
+  const classes = useStyles({ isSmall: !matches });
   const price = props.prices[0].price
     .toLocaleString('en', { style: 'currency', currency: 'USD' });
   const year = new Date(props.dates[0].date).getFullYear();
