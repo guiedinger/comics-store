@@ -1,11 +1,6 @@
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
-import IconButton from '@material-ui/core/IconButton';
-import Button from '@material-ui/core/Button';
+import { Paper, IconButton, Button } from '@material-ui/core';
 import { ArrowBack, ArrowForward } from '@material-ui/icons';
-// import Typography from '@material-ui/core/Typography';
-// import AppBar from '@material-ui/core/AppBar';
-
 
 export default (props) => {
   const lastPage = parseInt(props.totalComics / props.comicsByPage);

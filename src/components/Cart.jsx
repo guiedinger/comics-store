@@ -1,15 +1,14 @@
 import React from 'react';
-import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
-import CartIcon from '@material-ui/icons/ShoppingCart';
+import { IconButton, Badge } from '@material-ui/core';
+import { ShoppingCart } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 
 export default (props) => {
   return (
     <Link to="/cart">
       <IconButton aria-label="show 4 new mails" >
-        <Badge badgeContent={4} color="secondary">
-          <CartIcon color="action" />
+        <Badge badgeContent={3} color="secondary">
+          <ShoppingCart color="action" />
         </Badge>
       </IconButton>
     </Link>

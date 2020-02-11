@@ -1,7 +1,5 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import ToolBar from '@material-ui/core/ToolBar';
-import Typography from '@material-ui/core/Typography';
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
@@ -27,7 +25,7 @@ export default (props) => {
 
   return (
     <AppBar position="sticky">
-      <ToolBar>
+      <Toolbar>
         <Link to="/" className={classes.logoLink}>
           <Typography variant="h4" className={classes.logo}>
             COMICS STORE
@@ -35,7 +33,7 @@ export default (props) => {
         </Link>
         <div className={classes.grow}></div>
         <Cart />
-      </ToolBar>
+      </Toolbar>
     </AppBar>
   );
 }
