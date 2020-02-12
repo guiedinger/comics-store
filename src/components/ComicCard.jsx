@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardMedia, CardContent, Typography, useMediaQuery } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import { Skeleton } from '@material-ui/lab';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -31,6 +32,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 export default (props) => {
+   const { isLoading = true } = props;
   const matches = useMediaQuery('(min-width:375px)');
   const classes = useStyles({ isSmall: !matches });
   const price = props.prices[0].price
@@ -40,15 +42,21 @@ export default (props) => {
   return (
     <Card className={classes.root}>
       <div className={classes.content}>
-        <CardMedia
-          className={classes.comicImage}
-          image={
-            `${props.thumbnail.path
-            }/portrait_uncanny.${
-            props.thumbnail.extension}`
-          }
-          title={props.title}
-        />
+      {
+        isLoading ? (
+          <Skeleton animation="wave" variant="rect" className={classes.comicImage} />
+        ) : (
+          <CardMedia
+            className={classes.comicImage}
+            image={
+              `${props.thumbnail.path
+              }/portrait_uncanny.${
+              props.thumbnail.extension}`
+            }
+            title={props.title}
+          />
+        )
+      }
         <CardContent className={classes.details}>
           <div>
             <Typography className={classes.title}>
