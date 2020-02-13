@@ -8,12 +8,14 @@ import {
 import Container from '@material-ui/core/Container';
 
 import ToolBar from './components/ToolBar';
+import ScrollToTop from './components/ScrollToTop';
 import Comics from './pages/ComicsPage';
 import Cart from './pages/CartPage';
 
 export default (props) => {
   return (
     <Router>
+      <ScrollToTop />
       <ToolBar />
       <Container maxWidth="md">
         <Switch>
