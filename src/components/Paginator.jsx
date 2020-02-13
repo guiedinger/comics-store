@@ -35,8 +35,9 @@ export default (props) => {
       <IconButton color="primary" aria-label="arrow back" component="span">
         <ArrowBack />
       </IconButton>
-      {pageList.map((page) =>
-        <NavLink 
+      {pageList.map((page, i) =>
+        <NavLink
+          key={i} 
           className={classes.pageLink}
           to={`/${page}`}
           activeStyle={{

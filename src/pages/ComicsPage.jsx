@@ -21,7 +21,8 @@ const useStyles = makeStyles(theme => ({
 
 export default (props) => {
   const classes = useStyles();
-  const [comics, setComics] = useState([]);
+  const [isLoading, setIsLoading ] = useState(false);
+  const [comics, setComics] = useState(new Array(20).fill({ isLoading: true }));
   const [totalComics, setTotalComics] = useState(0);
   const { page } = useParams();
   const comicsByPage = 20;
@@ -29,6 +30,7 @@ export default (props) => {
   const currentDate = new Date().toISOString().slice(0, 10);
 
   useEffect(() => {
+    setIsLoading(true);
     api.get('comics', {
       params: {
         formatType: 'comic',
@@ -39,9 +41,9 @@ export default (props) => {
     })
       .then(res => {
         const newComics = res.data.data.results;
-        //.filter((comic) => !!comic.prices[0].price);
         setComics(newComics);
         setTotalComics(res.data.data.total);
+        setIsLoading(false);
         console.log(newComics);
       });
   }, [currentPage, currentDate]);
@@ -50,7 +52,7 @@ export default (props) => {
     <div className={classes.root}>
       <div className={classes.comicsContainer}>
         {comics && comics.map(comic =>
-          <ComicCard key={comic.id} {...comic} />)}
+          <ComicCard key={comic.id} {...comic} isLoading={isLoading} />)}
       </div>
       <Paginator
         currentPage={currentPage}
