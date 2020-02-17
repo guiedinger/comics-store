@@ -8,11 +8,12 @@ import {
 import Container from '@material-ui/core/Container';
 
 import ToolBar from './components/ToolBar';
+import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Comics from './pages/ComicsPage';
 import Cart from './pages/CartPage';
 
-export default (props) => {
+export default () => {
   return (
     <Router>
       <ScrollToTop />
@@ -30,6 +31,7 @@ export default (props) => {
           </Route>
         </Switch>
       </Container>
+      <Footer />
     </Router>
   );
 }

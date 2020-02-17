@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default (props) => {
+export default () => {
   const classes = useStyles();
 
   return (
