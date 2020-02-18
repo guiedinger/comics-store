@@ -31,11 +31,11 @@ export default () => {
           <Route exact path="/" render={() => (
             <Redirect to="/1"/>
           )}/>
+          <Route path="/cart">
+            <Cart></Cart>
+          </Route>
           <Route path="/:page">
             <Comics></Comics>
-          </Route>
-          <Route exact path="/cart">
-            <Cart></Cart>
           </Route>
         </Switch>
       </Container>
