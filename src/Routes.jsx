@@ -12,13 +12,21 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Comics from './pages/ComicsPage';
 import Cart from './pages/CartPage';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles(theme => ({
+   root: {
+    flexGrow: 1
+   },
+}));
 
 export default () => {
+  const classes = useStyles();
   return (
     <Router>
       <ScrollToTop />
       <ToolBar />
-      <Container maxWidth="md">
+      <Container maxWidth="md" className={classes.root}>
         <Switch>
           <Route exact path="/" render={() => (
             <Redirect to="/1"/>
@@ -26,7 +34,7 @@ export default () => {
           <Route path="/:page">
             <Comics></Comics>
           </Route>
-          <Route path="/cart">
+          <Route exact path="/cart">
             <Cart></Cart>
           </Route>
         </Switch>
