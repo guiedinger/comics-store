@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
   const classes = useStyles();
   const [isLoading, setIsLoading ] = useState(false);
-  const [comics, setComics] = useState(new Array(20).fill({ isLoading: true }));
+  const [comics, setComics] = useState(new Array(20).fill({}));
   const [totalComics, setTotalComics] = useState(0);
   const { page } = useParams();
   const comicsByPage = 20;
@@ -58,6 +58,7 @@ export default (props) => {
         currentPage={currentPage}
         comicsByPage={comicsByPage}
         totalComics={totalComics}
+        isLoading={isLoading}
       />
     </div>
   );
