@@ -1,13 +1,18 @@
 import React from 'react';
-import { Card, CardMedia, CardContent, Typography, useMediaQuery } from '@material-ui/core';
+import { Card, CardMedia, CardContent, CardActionArea, Typography, useMediaQuery } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Skeleton } from '@material-ui/lab';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: props => props.isSmall ? '90%' : '350px',
     height: props => props.isSmall ? 'auto' : '225px',
     margin: '15px',
+    transition: 'transform 1s ease-out',
+    '&:hover': {
+      transform: 'scale(1.05)',
+    }
   },
   title: {
     maxHeight: '6rem',
@@ -23,6 +28,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     boxSizing: 'border-box',
     width: props => props.isSmall ? 'auto' : '200px',
+  },
+  actionArea: {
+    width: props => props.isSmall ? '100%' : '150px',
+    height: props => props.isSmall ? 'auto' : '225px',
   },
   comicImage: {
     width: props => props.isSmall ? '100%' : '150px',
@@ -61,11 +70,15 @@ export default (props) => {
           isLoading ? (
             <Skeleton animation="wave" variant="rect" className={classes.comicImage} />
           ) : (
-              <CardMedia
-                className={classes.comicImage}
-                image={imageSrc}
-                title={props.title}
-              />
+              <CardActionArea className={classes.actionArea}>
+                <Link to={`/comic/${props.id}`}>
+                  <CardMedia
+                    className={classes.comicImage}
+                    image={imageSrc}
+                    title={props.title}
+                  />
+                </Link>
+              </CardActionArea>
             )
         }
         <CardContent className={classes.details}>

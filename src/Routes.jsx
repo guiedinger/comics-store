@@ -11,6 +11,7 @@ import ToolBar from './components/ToolBar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Comics from './pages/ComicsPage';
+import Comic from './pages/ComicPage';
 import Cart from './pages/CartPage';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -32,10 +33,13 @@ export default () => {
             <Redirect to="/1"/>
           )}/>
           <Route path="/cart">
-            <Cart></Cart>
+            <Cart/>
+          </Route>
+          <Route path="/comic/:id">
+            <Comic/>
           </Route>
           <Route path="/:page">
-            <Comics></Comics>
+            <Comics/>
           </Route>
         </Switch>
       </Container>
