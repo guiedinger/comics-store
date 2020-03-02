@@ -3,6 +3,7 @@ import { Card, CardMedia, CardContent, CardActionArea, Typography, useMediaQuery
 import { makeStyles } from '@material-ui/core/styles';
 import { Skeleton } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
+import { thumbSrc } from '../services/helper';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -50,18 +51,7 @@ export default (props) => {
   const year =
     new Date((props.dates && props.dates[0].date)
       || Date.now()).getFullYear();
-  const imageSrc =
-    (
-      props.thumbnail
-      && props.thumbnail.path
-      && props.thumbnail.extension
-    ) ? (
-        `${props.thumbnail.path
-        }/portrait_uncanny.${
-        props.thumbnail.extension}`
-      ) : (
-        'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/portrait_uncanny.jpg'
-      );
+  const imageSrc = thumbSrc(props.thumbnail);
 
   return (
     <Card className={classes.root}>
