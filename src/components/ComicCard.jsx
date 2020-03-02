@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     width: props => props.isSmall ? '90%' : '350px',
     height: props => props.isSmall ? 'auto' : '225px',
     margin: '15px',
-    transition: 'transform 1s ease-out',
+    transition: 'transform 0.5s ease-out',
     '&:hover': {
       transform: 'scale(1.05)',
     }
