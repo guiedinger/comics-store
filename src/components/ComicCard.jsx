@@ -49,7 +49,7 @@ export default (props) => {
     ((props.prices && props.prices[0].price) || 0)
       .toLocaleString('en', { style: 'currency', currency: 'USD' });
   const year =
-    new Date((props.dates && props.dates[0].date)
+    new Date((props.dates && props.dates[0].date && Date(props.dates[0].date))
       || Date.now()).getFullYear();
   const imageSrc = thumbSrc(props.thumbnail);
 
