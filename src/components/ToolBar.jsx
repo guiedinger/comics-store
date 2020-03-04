@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Container } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom';
 import Cart from './Cart';
@@ -25,15 +25,17 @@ export default () => {
 
   return (
     <AppBar position="sticky">
-      <Toolbar>
-        <Link to="/" className={classes.logoLink}>
-          <Typography variant="h4" className={classes.logo}>
-            COMICS STORE
-          </Typography>
-        </Link>
-        <div className={classes.grow}></div>
-        <Cart />
-      </Toolbar>
+      <Container maxWidth="md">
+        <Toolbar>
+          <Link to="/" className={classes.logoLink}>
+            <Typography variant="h4" className={classes.logo}>
+              COMICS STORE
+            </Typography>
+          </Link>
+          <div className={classes.grow}></div>
+          <Cart />
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 }
