@@ -16,10 +16,26 @@ import Cart from './pages/CartPage';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
-   root: {
-    flexGrow: 1
-   },
+  root: {
+    flexGrow: 1,
+  },
+  '@global': {
+    '::-webkit-scrollbar': {
+      width: '1rem',
+    },
+    '::-webkit-scrollbar-track': {
+      background: theme.palette.primary.main,
+    },
+    '::-webkit-scrollbar-thumb': {
+      background: theme.palette.secondary.main,
+    },
+    '::-webkit-scrollbar-thumb:hover': {
+      background: theme.palette.secondary.ligth,
+    }
+  }
 }));
+
+
 
 export default () => {
   const classes = useStyles();
@@ -30,16 +46,16 @@ export default () => {
       <Container maxWidth="md" className={classes.root}>
         <Switch>
           <Route exact path="/" render={() => (
-            <Redirect to="/1"/>
-          )}/>
+            <Redirect to="/1" />
+          )} />
           <Route path="/cart">
-            <Cart/>
+            <Cart />
           </Route>
           <Route path="/comic/:id">
-            <Comic/>
+            <Comic />
           </Route>
           <Route path="/:page">
-            <Comics/>
+            <Comics />
           </Route>
         </Switch>
       </Container>
