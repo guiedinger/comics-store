@@ -3,7 +3,7 @@ import { Card, CardMedia, CardContent, CardActionArea, Typography, useMediaQuery
 import { makeStyles } from '@material-ui/core/styles';
 import { Skeleton } from '@material-ui/lab';
 import { Link } from 'react-router-dom';
-import { thumbSrc } from '../services/helper';
+import { thumbSrc, comicPrice, comicYear } from '../services/helper';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,12 +45,8 @@ export default (props) => {
   const { isLoading = false } = props;
   const matches = useMediaQuery('(min-width:375px)');
   const classes = useStyles({ isSmall: !matches });
-  const price =
-    ((props.prices && props.prices[0].price) || 0)
-      .toLocaleString('en', { style: 'currency', currency: 'USD' });
-  const year =
-    new Date((props.dates && props.dates[0].date && Date(props.dates[0].date))
-      || Date.now()).getFullYear();
+  const price = comicPrice(props.prices);
+  const year = comicYear(props.dates);
   const imageSrc = thumbSrc(props.thumbnail);
 
   return (
@@ -102,7 +98,7 @@ export default (props) => {
             isLoading ? (
               <Skeleton animation="wave" height={30} width="40%" />
             ) : (
-                <Typography component="h6" variant="h6">
+                <Typography variant="h6">
                   {price}
                 </Typography>
               )
