@@ -16,13 +16,12 @@ const avatarSrc = (thumb) =>
     thumb
     && thumb.path
     && thumb.extension
+    && thumb.path.split("/").pop() !== "image_not_available"
   ) ? (
       `${thumb.path
       }/standard_xlarge.${
       thumb.extension}`
-    ) : (
-      'http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available/standard_xlarge.jpg'
-    );
+    ) : (null);
 
 
 const comicPrice = (prices) => ((prices && prices[0].price) || 0)
