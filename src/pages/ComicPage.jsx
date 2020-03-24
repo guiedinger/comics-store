@@ -67,8 +67,8 @@ export default () => {
             </>
           )
         }
-        <List list={comic.characters} type="characters" isLoading={isLoading} />
-        <List list={comic.creators} type="creators" isLoading={isLoading} />
+        <List from="comics" identifier={id} type="characters" isLoading={isLoading} />
+        <List from="comics" identifier={id} type="creators" isLoading={isLoading} />
       </Box>
     </Paper>
   );
