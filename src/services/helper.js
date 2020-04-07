@@ -24,10 +24,10 @@ const avatarSrc = (thumb) =>
     ) : (null);
 
 
-const comicPrice = (prices) => ((prices && prices[0].price) || 0)
+const comicPrice = (prices) => ((prices && prices.length && prices[0].price) || 0)
   .toLocaleString('en', { style: 'currency', currency: 'USD' });
 
-const comicYear = (dates) => new Date((dates && dates[0].date && Date(dates[0].date))
+const comicYear = (dates) => new Date((dates && dates.length && dates[0].date)
   || Date.now()).getFullYear();
 
 export { thumbSrc, avatarSrc, comicPrice, comicYear };
