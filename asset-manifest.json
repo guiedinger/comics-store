@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/comics-store/static/css/main.deb39b56.chunk.css",
-    "main.js": "/comics-store/static/js/main.5b28f0b3.chunk.js",
-    "main.js.map": "/comics-store/static/js/main.5b28f0b3.chunk.js.map",
+    "main.js": "/comics-store/static/js/main.13f9a81a.chunk.js",
+    "main.js.map": "/comics-store/static/js/main.13f9a81a.chunk.js.map",
     "runtime-main.js": "/comics-store/static/js/runtime-main.71b5c1d8.js",
     "runtime-main.js.map": "/comics-store/static/js/runtime-main.71b5c1d8.js.map",
-    "static/js/2.5110e846.chunk.js": "/comics-store/static/js/2.5110e846.chunk.js",
-    "static/js/2.5110e846.chunk.js.map": "/comics-store/static/js/2.5110e846.chunk.js.map",
+    "static/js/2.51ab766c.chunk.js": "/comics-store/static/js/2.51ab766c.chunk.js",
+    "static/js/2.51ab766c.chunk.js.map": "/comics-store/static/js/2.51ab766c.chunk.js.map",
     "index.html": "/comics-store/index.html",
-    "precache-manifest.4360f61b3c1889b5d3490944c45a9d48.js": "/comics-store/precache-manifest.4360f61b3c1889b5d3490944c45a9d48.js",
+    "precache-manifest.15f1783629149c2f04097a872283e92b.js": "/comics-store/precache-manifest.15f1783629149c2f04097a872283e92b.js",
     "service-worker.js": "/comics-store/service-worker.js",
     "static/css/main.deb39b56.chunk.css.map": "/comics-store/static/css/main.deb39b56.chunk.css.map",
-    "static/js/2.5110e846.chunk.js.LICENSE.txt": "/comics-store/static/js/2.5110e846.chunk.js.LICENSE.txt"
+    "static/js/2.51ab766c.chunk.js.LICENSE.txt": "/comics-store/static/js/2.51ab766c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.71b5c1d8.js",
-    "static/js/2.5110e846.chunk.js",
+    "static/js/2.51ab766c.chunk.js",
     "static/css/main.deb39b56.chunk.css",
-    "static/js/main.5b28f0b3.chunk.js"
+    "static/js/main.13f9a81a.chunk.js"
   ]
 }

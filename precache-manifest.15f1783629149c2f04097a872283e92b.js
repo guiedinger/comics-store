@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46e2beef6df0c13add855e0686c7c050",
+    "revision": "cb85e250a99ac037e939ac66ec8ee64f",
     "url": "/comics-store/index.html"
   },
   {
-    "revision": "cf9e34729fb772a43728",
+    "revision": "d60406b283e420527942",
     "url": "/comics-store/static/css/main.deb39b56.chunk.css"
   },
   {
-    "revision": "733a3037cc8ccdbb242a",
-    "url": "/comics-store/static/js/2.5110e846.chunk.js"
+    "revision": "32b37d6d0bfe4e2614db",
+    "url": "/comics-store/static/js/2.51ab766c.chunk.js"
   },
   {
     "revision": "3adc01bea76e7956dc3633ee898f6936",
-    "url": "/comics-store/static/js/2.5110e846.chunk.js.LICENSE.txt"
+    "url": "/comics-store/static/js/2.51ab766c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf9e34729fb772a43728",
-    "url": "/comics-store/static/js/main.5b28f0b3.chunk.js"
+    "revision": "d60406b283e420527942",
+    "url": "/comics-store/static/js/main.13f9a81a.chunk.js"
   },
   {
     "revision": "86c4f97f877124f193e8",
