@@ -1,10 +1,10 @@
 <h1 align="center">Comics Store</h1>
 <p align="center">
   <img alt="Project Preview" src=".github/comics-store-preview.png" width="100%">
-  <a href="https://gitpod.io/#https://github.com/guiedinger/comics-store" target="_blank">
+  <a href="https://gitpod.io/#https://github.com/guiedinger/comics-store">
     <img alt="Gitpod Ready-to-Code" src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod">
   </a>
-  <a href="https://www.linkedin.com/in/guiedinger/" target="_blank">
+  <a href="https://www.linkedin.com/in/guiedinger/">
     <img alt="Linkedin" src="https://img.shields.io/badge/Linkedin-Guilherme%20Edinger-blue?logo=linkedin">
   </a>
   <img alt="Github Stars" src="https://img.shields.io/github/stars/guiedinger/comics-store?style=social">
@@ -13,7 +13,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
 <h2 align="center">
-  Deployed <a href="https://guilherme.edinger.com.br/comics-store/" target="_blank">here</a>.
+  Deployed <a href="https://guilherme.edinger.com.br/comics-store/">here</a>.
 </h2>
 I created this project with the intent to train my skills in React + Material UI.
 
