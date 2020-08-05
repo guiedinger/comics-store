@@ -1,18 +1,20 @@
-# Comics Store
+<h1 align="center">Comics Store</h1>
 <p align="center">
-  <img alt="Frontend" src=".github/comics-store-macbook.png" width="100%">
+  <img alt="Project Preview" src=".github/comics-store-preview.png" width="100%">
   <a href="https://gitpod.io/#https://github.com/guiedinger/comics-store">
     <img alt="Gitpod Ready-to-Code" src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod">
   </a>
   <a href="https://www.linkedin.com/in/guiedinger/">
-    <img alt="Gitpod Ready-to-Code" src="https://img.shields.io/badge/Gitpod-Guilherme%20Edinger-blue?logo=linkedin">
+    <img alt="Linkedin" src="https://img.shields.io/badge/Linkedin-Guilherme%20Edinger-blue?logo=linkedin">
   </a>
   <img alt="Github Stars" src="https://img.shields.io/github/stars/guiedinger/comics-store?style=social">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/guiedinger/comics-store" />
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/guiedinger/comics-store">
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
 </p>
-
+<h2 align="center">
+  Deployed <a href="https://guilherme.edinger.com.br/comics-store/">here</a>.
+</h2>
 I created this project with the intent to train my skills in React + Material UI.
 
 The Comics Store project use the [Marvel API](https://developer.marvel.com/), to run this project you need to create a developer account and get your API_KEY and put in the REACT_APP_API_KEY env variable.
