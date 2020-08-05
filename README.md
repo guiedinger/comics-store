@@ -1,9 +1,24 @@
-# comics-store
+# Comics Store
+<p align="center">
+  <img alt="Frontend" src=".github/comics-store-macbook.png" width="100%">
+  <a href="https://gitpod.io/#https://github.com/guiedinger/comics-store">
+    <img alt="Gitpod Ready-to-Code" src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod">
+  </a>
+  <a href="https://www.linkedin.com/in/guiedinger/">
+    <img alt="Gitpod Ready-to-Code" src="https://img.shields.io/badge/Gitpod-Guilherme%20Edinger-blue?logo=linkedin">
+  </a>
+  <img alt="Github Stars" src="https://img.shields.io/github/stars/guiedinger/comics-store?style=social">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/guiedinger/comics-store" />
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/guiedinger/comics-store">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+
+I created this project with the intent to train my skills in React + Material UI.
+
 The Comics Store project use the [Marvel API](https://developer.marvel.com/), to run this project you need to create a developer account and get your API_KEY and put in the REACT_APP_API_KEY env variable.
 
 
-[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/guiedinger/comics-store) 
-You can use Gitpod to code this project, in Gitpod you can add env variables by many ways that was explained in this [tutorial](https://www.gitpod.io/docs/environment-variables/).
+You can use [Gitpod](https://gitpod.io/#https://github.com/guiedinger/comics-store) to code this project in the browser, in Gitpod you can add env variables by many ways that was explained in this [tutorial](https://www.gitpod.io/docs/environment-variables/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
